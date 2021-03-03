@@ -1,0 +1,31 @@
+<h1>All our Flats</h1>
+
+<p>All <%= @flats.count %> flats.</p>
+<ul>
+
+<%= link_to "+ Add a flat", new_flat_path %>
+
+<div class="flex-container">
+  <div class="d-flex">
+    <% @flats.each do |flat| %>
+    <div class="card" style="width: 18rem;">
+      <img src="https://www.barnes-lyon.com/uploads/accommodations/660/pictures/15491/show/barnes-lyon-appartement-lyon-6eme.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.name %>
+        <i class="fas fa-euro-sign"></i><%= flat.price_per_night %>
+        <i class="fas fa-user-friends"></i><%= flat.number_of_guests %></p>
+      </div>
+      <div class="card-body">
+        <%= link_to "More info", flat_path(flat) %> -
+        <%= link_to "Edit", flat_path(flat) %> -
+        <%= link_to "Remove", flat_path(flat) %>
+      </div>
+    </div>
+
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+

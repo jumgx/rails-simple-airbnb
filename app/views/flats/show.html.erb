@@ -1,0 +1,19 @@
+
+
+<h3><%= @flat.name %></h3>
+<h4><%= @flat.address %></h4>
+<h3>A bit more about this flat</h3>
+<p><%= @flat.description %></p>
+
+<h4>Book this place !</h4>
+
+<h3>Details</h3>
+<%= @flat.price_per_night %>€
+<%= @flat.number_of_guests %>
+
+<p>Share</p>
+<%= link_to "Back to list", flats_path %>
+<ul>
+  <li> <i class="fab fa-facebook"></i></li>
+  <li><i class="fab fa-twitter-square"></i></li>
+</ul>
